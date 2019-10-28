@@ -1,0 +1,5 @@
+DEFAULT install
+NOHALT 1
+LABEL install
+  KERNEL pxelinux.cfg/esxi67u3/mboot.c32
+  APPEND -c pxelinux.cfg/esxi67u3/boot.cfg ks=http://192.168.69.50/ks130.cfg

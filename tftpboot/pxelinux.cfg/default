@@ -1,0 +1,21 @@
+DEFAULT vesamenu.c32
+TIMEOUT 600
+ONTIMEOUT BootLocal
+PROMPT 1
+MENU INCLUDE pxelinux.cfg/pxe.conf
+NOESCAPE 1
+
+LABEL BootLocal
+        localboot 0
+        TEXT HELP
+        Boot to local hard disk
+        ENDTEXT
+
+# Menus
+
+# ESXi
+LABEL ESXi Scripted Installs
+        MENU LABEL Install ESXi 6.7U3
+        KERNEL vesamenu.c32
+        APPEND pxelinux.cfg/pxe.conf pxelinux.cfg/conf/esxi67.menu
+

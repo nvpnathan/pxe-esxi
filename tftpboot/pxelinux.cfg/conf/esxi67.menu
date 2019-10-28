@@ -1,0 +1,73 @@
+DEFAULT vesamenu.c32
+TIMEOUT 600
+ONTIMEOUT BootLocal
+PROMPT 0
+MENU INCLUDE pxelinux.cfg/pxe.conf
+NOESCAPE 1
+LABEL MainMenu
+        MENU LABEL ^Return to Main Menu
+        KERNEL vesamenu.c32
+        APPEND pxelinux.cfg/default
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/esxi67u3/mboot.c32
+        APPEND -c pxelinux.cfg/esxi67u3/boot.cfg ks=http://192.168.69.50/ks130.cfg
+        MENU LABEL vlab-esx-130.vballin.com
+        TEXT HELP
+        Install ESXi6.7 U3
+        ENDTEXT
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67u3/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67u3/boot.cfg ks=http://192.168.69.50/ks140.cfg
+        MENU LABEL vlab-esx-140.vballin.com
+        TEXT HELP
+        Install ESXi6.7 U3
+        ENDTEXT
+
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67u3/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67u3/boot.cfg ks=http://192.168.69.50/ks150.cfg
+        MENU LABEL vlab-esx-150.vballin.com
+        TEXT HELP
+        Install ESXi6.7 U3
+        ENDTEXT
+
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67cust/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67cust/boot.cfg ks=http://192.168.69.50/ks80.cfg
+        MENU LABEL vlab-esx-80.vballin.com
+        TEXT HELP
+        Install ESXi6.7 Custom
+        ENDTEXT
+		
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67cust/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67cust/boot.cfg ks=http://192.168.69.50/ks90.cfg
+        MENU LABEL vlab-esx-90.vballin.com
+        TEXT HELP
+        Install ESXi6.7 Custom
+        ENDTEXT
+
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67cust/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67cust/boot.cfg ks=http://192.168.69.50/ks100.cfg
+        MENU LABEL vlab-esx-100.vballin.com
+        TEXT HELP
+        Install ESXi6.7 Custom
+        ENDTEXT
+
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67cust/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67cust/boot.cfg ks=http://192.168.69.50/ks110.cfg
+        MENU LABEL vlab-esx-110.vballin.com
+        TEXT HELP
+        Install ESXi6.7 Custom
+        ENDTEXT
+
+LABEL ESXi 6.7 Custom Installer
+        KERNEL pxelinux.cfg/Images/esxi67cust/mboot.c32
+        APPEND -c pxelinux.cfg/Images/esxi67cust/boot.cfg ks=http://192.168.69.50/ks120.cfg
+        MENU LABEL vlab-esx-120.vballin.com
+        TEXT HELP
+        Install ESXi6.7 Custom
+        ENDTEXT
+
